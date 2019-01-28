@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent, HttpErrorResponse, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { type } from 'os';
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
@@ -40,5 +39,5 @@ export class ErrorInterceptor implements HttpInterceptor {
 export const ErrorInterceptorProvider = {
     provide: HTTP_INTERCEPTORS,
     useClass: ErrorInterceptor,
-    multi: true
+    multi: true,
 }
